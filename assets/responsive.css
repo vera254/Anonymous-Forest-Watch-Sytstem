@@ -1,0 +1,178 @@
+/* ============================================
+   RESPONSIVE UTILITIES
+   Mobile-First Approach
+   ============================================ */
+
+/* Mobile (up to 640px) */
+@media (max-width: 640px) {
+    .hide-mobile {
+        display: none !important;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .card-header,
+    .card-body,
+    .card-footer {
+        padding: var(--spacing-md);
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .modal-dialog {
+        width: 95%;
+        margin: var(--spacing-sm);
+    }
+    
+    #map {
+        height: 300px;
+    }
+}
+
+/* Tablet (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .hide-tablet {
+        display: none !important;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+    .hide-desktop {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Large Desktop (1440px and above) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    :root {
+        --font-size-md: 1.125rem;
+    }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .stat-card,
+    .report-row {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .btn:active,
+    .stat-card:active,
+    .report-row:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-50: #1a1a1a;
+        --gray-100: #2d2d2d;
+        --gray-200: #3d3d3d;
+        --gray-300: #4d4d4d;
+        --gray-800: #e0e0e0;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    }
+    
+    .card,
+    .stat-card,
+    .modal-content,
+    .filters-bar,
+    .reports-table-wrapper,
+    .chart-card {
+        background: #2d2d2d;
+    }
+    
+    .table th {
+        background: #3d3d3d;
+        color: #e0e0e0;
+    }
+    
+    .table td {
+        border-bottom-color: #3d3d3d;
+    }
+    
+    .form-control,
+    .form-select {
+        background: #3d3d3d;
+        border-color: #4d4d4d;
+        color: #e0e0e0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --forest-primary: #004d40;
+        --forest-primary-light: #00695c;
+    }
+    
+    .btn,
+    .card,
+    .stat-card {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) and (max-height: 500px) {
+    .modal-body {
+        max-height: 60vh;
+    }
+    
+    #map {
+        height: 250px;
+    }
+}
