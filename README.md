@@ -1,4 +1,4 @@
-The Forest Watch System is a decentralized, open-source platform designed for environmental monitoring, threat detection, and ecological data collection. The Anonymous Edition is a specialized fork built for researchers, journalists, and activists operating in environments where operational security (OpSec) and data integrity are paramount.
+The Anonymous Forest Watch System is a decentralized, open-source platform designed for environmental monitoring, threat detection, and ecological data collection. The Anonymous Edition is a specialized fork built for researchers, journalists, and activists operating in environments where operational security (OpSec) and data integrity are paramount.
 
 This system allows users to crowdsource data on illegal logging, wildlife trafficking, and pollution without exposing their identities or locations. It utilizes a zero-knowledge architecture and routes all traffic through decentralized networks to ensure that neither the system administrators nor external observers can identify the contributors.
 
